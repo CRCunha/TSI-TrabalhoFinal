@@ -1,0 +1,23 @@
+:root {
+    /* VARIAVEL EXEMPLO */
+    --variavel: #3f3f3f;
+    --flex: flex;
+    --center: center;
+    --wrap: wrap;
+    --nowrap: nowrap;
+    --flex-start: flex-start;
+    --flex-end: flex-end;
+    --title: 'Montserrat', sans-serif;
+    --space-around: space-around;
+    --title-color: rgb(219, 221, 226);
+    --card-color: rgb(238, 236, 241);
+}
+
+body {
+    background-color: rgb(219, 221, 226);
+}
+
+
+/* QUERY EXEMPLO */
+
+@media only screen and (max-width: 800px) {}

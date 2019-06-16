@@ -1,0 +1,16 @@
+main {
+    margin-top: 30px;
+    width: 100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    flex-wrap: var(--wrap);
+}
+
+main .content {
+    width: 80%;
+    height: 85%;
+    display: var(--flex);
+    justify-content: var(--space-around);
+    flex-wrap: var(--wrap);
+}

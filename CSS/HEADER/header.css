@@ -1,0 +1,112 @@
+header {
+    width: 100%;
+    height: 240px;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    background: rgb(113, 54, 141);
+    background: linear-gradient(38deg, rgba(113, 54, 141, 1) 0%, rgba(236, 92, 115, 1) 100%);
+    box-shadow: 0px 3px 6px 3px rgb(0, 0, 0, 0.08);
+}
+
+header .infos {
+    width: 100%;
+    height: 100px;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+}
+
+header .infos .container {
+    width: 80%;
+    height: 100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    flex-wrap: var(--wrap);
+}
+
+header .infos .container .l-side {
+    width: 50%;
+    height: 100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    flex-wrap: var(--wrap);
+}
+
+header .infos .container .l-side .top {
+    width: 100%;
+    height: 70%;
+    display: var(--flex);
+    justify-content: var(--flex-start);
+    align-items: var(--center);
+    font-family: var(--title);
+    color: rgb(219, 221, 226);
+    font-size: 22pt;
+}
+
+header .infos .container .l-side .bot {
+    width: 100%;
+    height: 30%;
+    display: var(--flex);
+    justify-content: var(--flex-start);
+    align-items: var(--center);
+    font-family: var(--title);
+    color: rgb(219, 221, 226);
+    font-size: 10pt;
+}
+
+header .infos .container .r-side {
+    width: 50%;
+    height: 100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    flex-wrap: var(--nowrap);
+}
+
+header .infos .container .r-side .info {
+    width: 75%;
+    height: 100%;
+    display: var(--flex);
+    justify-content: var(--flex-end);
+    align-items: var(--center);
+    font-family: var(--title);
+    color: rgb(219, 221, 226);
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+header .infos .container .r-side .avatar {
+    width: 20%;
+    height: 100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+}
+
+header .infos .container .r-side .avatar .img {
+    width: 60px;
+    height: 60px;
+    background-image: url("../../IMG/HEADER/avatar.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+header .infos .container .r-side .carrinho {
+    margin-left: 10px;
+    width: 38px;
+    height: 38px;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    cursor: pointer;
+}
+
+header .infos .container .r-side .carrinho img {
+    width: 100%;
+}
