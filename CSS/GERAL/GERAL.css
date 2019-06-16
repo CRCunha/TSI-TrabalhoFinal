@@ -9,6 +9,7 @@
     --flex-end: flex-end;
     --title: 'Montserrat', sans-serif;
     --space-around: space-around;
+    --space-evenly: space-evenly;
     --title-color: rgb(219, 221, 226);
     --card-color: rgb(238, 236, 241);
 }
