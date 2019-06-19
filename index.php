@@ -20,9 +20,9 @@
     <link rel="stylesheet " href="CSS/MODAL/modal.css ">
     <link rel="stylesheet " href="CSS/MODAL/modal2.css ">
     <script src="JS/modal.js " type="text/JavaScript "></script>
+    <script src="JS/log-reg.js " type="text/JavaScript "></script>
     <!--FONTES-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap " rel="stylesheet ">
-
     <!--FAV ICON-->
     <link rel="shortcut icon " href=" " />
 </head>
@@ -81,6 +81,18 @@
                         <img onclick="fechar2() " src="IMG/MODAL/close.png ">
                     </div>
                 </div>
+            </div>
+            <div class="escolha">
+                <div class="btn" id="btn-log" onclick="log() ">Login</div>
+                <div class="btn" id="btn-reg"  onclick="reg() ">Register</div>
+            </div>
+            <div class="modal2-contents">
+                <form action="inclui.php" method="POST">
+                    <input type="text" name="nome" id="" placeholder="Nome:" >
+                    <input type="email" name="email" id="" placeholder="Email:" >
+                    <input type="password" name="senha" id="" placeholder="Senha:" >
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
         </div>
     </div>  
