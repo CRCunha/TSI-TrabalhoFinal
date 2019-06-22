@@ -5,7 +5,7 @@
     justify-content: var(--center);
     align-items: var(--center);
     position: fixed;
-    top: 40px;
+    top: 35px;
     display: none;
 }
 
@@ -111,6 +111,7 @@
     justify-content: var(--center);
     align-items: var(--center);
     flex-wrap: var(--wrap);
+    font-family: var(--title);
 }
 
 .modal2-contents form input {
@@ -120,6 +121,7 @@
     border-bottom: solid 2px rgba(0, 0, 0, 0.08);
     text-align: center;
     padding-bottom: 20px;
+    color: #3f3f3f;
 }
 
 .modal2-contents form input[type=submit] {
@@ -134,4 +136,8 @@
     background-color: var(--title-color);
     text-align: center;
     cursor: pointer;
+}
+
+#register-form {
+    display: none;
 }

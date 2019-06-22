@@ -1,0 +1,6 @@
+TO  DO:
+    Form Login
+    Função nos butões do modal Log-Reg
+    Conexão com banco
+    Register Funcional
+    

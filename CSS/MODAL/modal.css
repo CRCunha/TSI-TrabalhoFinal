@@ -5,7 +5,7 @@
     justify-content: var(--center);
     align-items: var(--center);
     position: fixed;
-    top: 40px;
+    top: 35px;
     display: none;
     transition: .5s;
 }

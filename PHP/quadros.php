@@ -82,3 +82,45 @@
         </div>
     </div>
 </div>
+
+<!--P7-->
+<!-- <div class="quadro ">
+    <div class="top "></div>
+    <div class="bot ">
+        <div class="container ">
+            <div class="info ">Produto 7</div>
+            <div class="info2 ">
+                <div class="img1 "></div>
+                <div class="img2 "></div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!--P8-->
+<!-- <div class="quadro ">
+    <div class="top "></div>
+    <div class="bot ">
+        <div class="container ">
+            <div class="info ">Produto 8</div>
+            <div class="info2 ">
+                <div class="img1 "></div>
+                <div class="img2 "></div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!--P9-->
+<!-- <div class="quadro ">
+    <div class="top "></div>
+    <div class="bot ">
+        <div class="container ">
+            <div class="info ">Produto 9</div>
+            <div class="info2 ">
+                <div class="img1 "></div>
+                <div class="img2 "></div>
+            </div>
+        </div>
+    </div>
+</div> -->

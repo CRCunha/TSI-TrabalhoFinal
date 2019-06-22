@@ -32,8 +32,8 @@
         <div class="infos ">
             <div class="container ">
                 <div class="l-side ">
-                    <div class="top ">Welcome User</div>
-                    <div class="bot ">Welcome to LPW project - IFSul - Pelotas</div>
+                    <div class="top ">Welcome</div>
+                    <div class="bot ">LPW Project - IFSul - Cristian, Filipe</div>
                 </div>
                 <div class="r-side ">
                     <div class="info " onclick="abrir2() ">Login / Register</div>
@@ -53,7 +53,8 @@
         <div class="content ">
             <!-- Produtos -->
             <?php 
-                include("quadros.php");
+                include("PHP/quadros.php");
+                include("PHP/conecta.php");
             ?>
         </div>
     </main>
@@ -87,11 +88,16 @@
                 <div class="btn" id="btn-reg"  onclick="reg() ">Register</div>
             </div>
             <div class="modal2-contents">
-                <form action="inclui.php" method="POST">
-                    <input type="text" name="nome" id="" placeholder="Nome:" >
-                    <input type="email" name="email" id="" placeholder="Email:" >
-                    <input type="password" name="senha" id="" placeholder="Senha:" >
-                    <input type="submit" value="Enviar">
+                <form action="PHP/register.php" method="POST" id="register-form">
+                    <input type="text" name="nome" id="" placeholder="Nome:"  autocomplete="off">
+                    <input type="email" name="email" id="" placeholder="Email:"  autocomplete="off">
+                    <input type="password" name="senha" id="" placeholder="Senha:" autocomplete="off">
+                    <input type="submit" name="enviar" value="Enviar">
+                </form>
+                <form action="PHP/login.php" method="POST" id="login-form">
+                    <input type="email" name="email" id="" placeholder="Email:"  autocomplete="off">
+                    <input type="password" name="senha" id="" placeholder="Senha:" autocomplete="off">
+                    <input type="submit" name="enviar" value="Enviar">
                 </form>
             </div>
         </div>
