@@ -68,15 +68,21 @@ main .content .quadro .bot .container .info2 .img1 {
 }
 
 main .content .quadro .bot .container .info2 .img2 {
-    background-image: url("../../IMG/MAIN/delete.png");
+    /* background-image: url("../../IMG/MAIN/delete.png"); */
     background-position: center;
     background-size: cover;
     width: 30px;
     height: 30px;
-    background-color: var(--card-color);
+    background-color: var(--title-color);
     margin-left: 8px;
-    background-color: transparent;
     cursor: pointer;
     border-radius: 100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
     box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.08);
+}
+
+main .content .quadro .bot .container .info2 .img2 img {
+    width: 80%;
 }

@@ -6,7 +6,7 @@
             <div class="info ">Produto 1</div>
             <div class="info2 ">
                 <div class="img1 "></div>
-                <div class="img2 "></div>
+                <div class="img2 "><img src="../IMG/CATEGORIAS/bebida.png"></div>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
             <div class="info ">Produto 2</div>
             <div class="info2 ">
                 <div class="img1 "></div>
-                <div class="img2 "></div>
+                <div class="img2 "><img src="../IMG/CATEGORIAS/comida.png"></div>
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
             <div class="info ">Produto 3</div>
             <div class="info2 ">
                 <div class="img1 "></div>
-                <div class="img2 "></div>
+                <div class="img2 "><img src="../IMG/CATEGORIAS/eletronico.png"></div>
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
             <div class="info ">Produto 4</div>
             <div class="info2 ">
                 <div class="img1 "></div>
-                <div class="img2 "></div>
+                <div class="img2 "><img src="../IMG/CATEGORIAS/mobilha.png"></div>
             </div>
         </div>
     </div>
