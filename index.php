@@ -19,6 +19,7 @@
     <link rel="stylesheet " href="CSS/MAIN/quadros.css ">
     <link rel="stylesheet " href="CSS/MODAL/modal.css ">
     <link rel="stylesheet " href="CSS/MODAL/modal2.css ">
+    <link rel="stylesheet " href="CSS/BUSCA/busca.css ">
     <script src="JS/modal.js " type="text/JavaScript "></script>
     <script src="JS/log-reg.js " type="text/JavaScript "></script>
     <!--FONTES-->
@@ -47,7 +48,14 @@
             </div>
         </div>
     </header>
-
+    <div class="busca">
+        <div class="container">
+            <form>
+                <input type="text" name="categoria-p" id="" placeholder="Pesquisa por Categoria">
+                <input type="submit" value="buscar">
+            </form>
+        </div>
+    </div>
     <main>
         <div class="title">Produtos</div>
         <div class="content ">

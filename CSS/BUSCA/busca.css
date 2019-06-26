@@ -1,0 +1,49 @@
+.busca {
+    width: 100%;
+    height: 130px;
+    margin-bottom: -20px;
+    display: var(--flex);
+    justify-content: var(--center);
+}
+
+.busca .container {
+    width: 80%;
+    height: 100%;
+}
+
+.busca .container form {
+    width: 100%;
+    height: 100%;
+    display: var(--flex);
+    align-items: var(--flex-end);
+    justify-content: var(--center);
+}
+
+.busca .container form input {
+    width: 30%;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 2px #adadad;
+    text-align: center;
+    padding: 20px;
+    display: var(--flex);
+    align-items: var(--flex-end);
+    justify-content: var(--center);
+    flex-wrap: nowrap;
+}
+
+.busca .container form input[type='submit'] {
+    width: 50px;
+    background-color: transparent;
+    color: transparent;
+    background-image: url("../../IMG/BUSCA/busca.png");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.busca .container form img {
+    width: 2%;
+    margin-right: 5px;
+}
