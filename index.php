@@ -19,6 +19,7 @@
     <link rel="stylesheet " href="CSS/MAIN/quadros.css ">
     <link rel="stylesheet " href="CSS/MODAL/modal.css ">
     <link rel="stylesheet " href="CSS/MODAL/modal2.css ">
+    <link rel="stylesheet " href="CSS/MODAL/modal3.css ">
     <link rel="stylesheet " href="CSS/BUSCA/busca.css ">
     <script src="JS/modal.js " type="text/JavaScript "></script>
     <script src="JS/log-reg.js " type="text/JavaScript "></script>
@@ -43,6 +44,9 @@
                     </div>
                     <div class="carrinho ">
                         <img src="IMG/HEADER/carrinho.png " onclick="abrir() ">
+                    </div>
+                    <div style="margin-left: 25px" class="carrinho ">
+                        <img src="IMG/HEADER/add.png " onclick="abrir3() ">
                     </div>
                 </div>
             </div>
@@ -110,6 +114,20 @@
             </div>
         </div>
     </div>  
+
+    <div class="modal3 ">
+        <div class="container ">
+            <div class="header ">
+                <div class="content ">
+                    <div class="left "></div>
+                    <div class="center ">Adicionar Produto</div>
+                    <div class="right ">
+                        <img onclick="fechar3() " src="IMG/MODAL/close.png ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
 </body>
 
 </html>
