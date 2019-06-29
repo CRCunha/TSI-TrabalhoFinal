@@ -11,7 +11,7 @@ include("conecta.php");
 // 	$sqlAux = " where titulo LIKE '$inicial%' ";
 // }
 
-$sql = "select nome,categoria, imagem from produto";
+$sql = "select nome,categoria, imagem, preco from produto";
 
 try {
 	$consulta = $link->prepare($sql);
@@ -21,7 +21,7 @@ try {
 		$nome = utf8_decode($registro['nome']);
 		$categoria = utf8_decode($registro['categoria']);
 		$imagem = utf8_decode($registro['imagem']);
-
+		$preco = utf8_decode($registro['preco']);
 
 		echo("
 		<div class='quadro'>
@@ -29,7 +29,7 @@ try {
 		border-top-left-radius: 8px; border-top-right-radius: 8px'></div>
 		<div class='bot '>
 			<div class='container '>
-				<div class='info '>$nome</div>
+				<div class='info '>$nome <div class='preco'>$preco R$</div></div>
 				<div class='info2 '>
 					<div class='img1 '></div>
 					<div class='img2 '><img src='../IMG/CATEGORIAS/$categoria.png'></div>

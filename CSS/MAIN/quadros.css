@@ -36,18 +36,24 @@ main .content .quadro .bot .container {
 }
 
 main .content .quadro .bot .container .info {
-    width: 50%;
+    width: 74%;
     height: 100%;
     display: var(--flex);
     justify-content: var(--flex-start);
     align-items: var(--center);
     font-family: var(--title);
     color: var(--title-color);
-    font-size: 12pt;
+    font-size: 11pt;
+}
+
+main .content .quadro .bot .container .info .preco {
+    color: #43b05c;
+    margin-left: 10px;
+    font-weight: bold;
 }
 
 main .content .quadro .bot .container .info2 {
-    width: 50%;
+    width: 26%;
     height: 100%;
     display: var(--flex);
     justify-content: var(--flex-end);

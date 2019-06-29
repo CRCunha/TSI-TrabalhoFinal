@@ -120,4 +120,10 @@
     .modal2-contents form input {
         width: 100%;
     }
+    main .content .quadro .bot .container .info {
+        width: 72%;
+    }
+    main .content .quadro .bot .container .info2 {
+        width: 28%;
+    }
 }
