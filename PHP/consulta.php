@@ -25,7 +25,8 @@ try {
 
 		echo("
 		<div class='quadro'>
-		<div class='top '></div>
+		<div class='top '  style='background-image: url($imagem); background-size: 60%; background-position: center; background-repeat: no-repeat;
+		border-top-left-radius: 8px; border-top-right-radius: 8px'></div>
 		<div class='bot '>
 			<div class='container '>
 				<div class='info '>$nome</div>
