@@ -13,14 +13,15 @@
     <meta name="googlebot" content="noindex">
     <!--LINKS-->
     <link rel="stylesheet" href="CSS/GERAL/GERAL.css" ">
-    <link rel="stylesheet " href="CSS/NORMALIZE/NORMALIZE.css ">
-    <link rel="stylesheet " href="CSS/HEADER/header.css ">
-    <link rel="stylesheet " href="CSS/MAIN/main.css ">
-    <link rel="stylesheet " href="CSS/MAIN/quadros.css ">
-    <link rel="stylesheet " href="CSS/MODAL/modal.css ">
-    <link rel="stylesheet " href="CSS/MODAL/modal2.css ">
-    <link rel="stylesheet " href="CSS/MODAL/modal3.css ">
-    <link rel="stylesheet " href="CSS/BUSCA/busca.css ">
+    <link rel="stylesheet" href="CSS/NORMALIZE/NORMALIZE.css ">
+    <link rel="stylesheet" href="CSS/HEADER/header.css ">
+    <link rel="stylesheet" href="CSS/MAIN/main.css ">
+    <link rel="stylesheet" href="CSS/MAIN/quadros.css ">
+    <link rel="stylesheet" href="CSS/MODAL/modal.css ">
+    <link rel="stylesheet" href="CSS/MODAL/modal2.css ">
+    <link rel="stylesheet" href="CSS/MODAL/modal3.css ">
+    <link rel="stylesheet" href="CSS/BUSCA/busca.css ">
+    <link rel="stylesheet" href="CSS/FOOTER/footer.css">
     <script src="JS/modal.js " type="text/JavaScript "></script>
     <script src="JS/log-reg.js " type="text/JavaScript "></script>
     <!--FONTES-->
@@ -135,7 +136,10 @@
                 </form>
             </div>
         </div>
-    </div> 
+    </div>
+    <footer>
+        <div class="container">Made by Cristian / Filipe  © 2019</div>
+    </footer>
 </body>
 
 </html>

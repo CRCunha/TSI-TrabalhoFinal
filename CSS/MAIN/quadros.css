@@ -76,7 +76,6 @@ main .content .quadro .bot .container .info2 .img2 {
     height: 30px;
     background-color: var(--title-color);
     margin-left: 8px;
-    cursor: pointer;
     border-radius: 100%;
     display: var(--flex);
     justify-content: var(--center);
