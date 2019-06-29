@@ -22,7 +22,8 @@ main .content .quadro .bot {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     background: rgb(113, 54, 141);
-    background: linear-gradient(38deg, rgba(113, 54, 141, 1) 0%, rgba(236, 92, 115, 1) 100%);
+    background: linear-gradient(38deg, #374E76 0%, #BC4AB1 100%);
+    ;
 }
 
 main .content .quadro .bot .container {

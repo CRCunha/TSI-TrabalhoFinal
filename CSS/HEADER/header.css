@@ -5,7 +5,7 @@ header {
     justify-content: var(--center);
     align-items: var(--center);
     background: rgb(113, 54, 141);
-    background: linear-gradient(38deg, rgba(113, 54, 141, 1) 0%, #ec5c73 100%);
+    background: linear-gradient(38deg, #374E76 0%, #BC4AB1 100%);
     /* background-image: url("../../IMG/HEADER/bc.jpg");
     background-size: cover;
     background-position: center; */
