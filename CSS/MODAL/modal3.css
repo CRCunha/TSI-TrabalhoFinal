@@ -64,47 +64,15 @@
     cursor: pointer;
 }
 
-.modal3 .container .escolha {
+.modal3 .container .content-main {
     width: 100%;
-    height: 120px;
+    height: 500px;
     display: var(--flex);
     justify-content: var(--center);
     align-items: var(--center);
 }
 
-.modal3 .container .escolha .btn {
-    width: 22%;
-    height: 46%;
-    background-color: var(--title-color);
-    display: var(--flex);
-    justify-content: var(--center);
-    align-items: var(--center);
-    font-family: var(--title);
-    color: #3f3f3f;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.modal3 .container .escolha .btn:hover {
-    background-color: #727272;
-    color: var(--title-color);
-    transition: .5s;
-}
-
-#btn-log {
-    margin-right: 10px;
-}
-
-.modal3-contents {
-    width: 100%;
-    height: 360px;
-    display: var(--flex);
-    justify-content: var(--center);
-    align-items: var(--center);
-    flex-wrap: var(--wrap);
-}
-
-.modal3-contents form {
+.modal3 .container .content-main form {
     width: 70%;
     height: 90%;
     display: var(--flex);
@@ -114,7 +82,7 @@
     font-family: var(--title);
 }
 
-.modal3-contents form input {
+.modal3 .container .content-main form input {
     width: 85%;
     background-color: transparent;
     border: none;
@@ -124,7 +92,7 @@
     color: #3f3f3f;
 }
 
-.modal3-contents form input[type=submit] {
+.modal3 .container .content-main form input[type=submit] {
     width: 25%;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -136,8 +104,4 @@
     background-color: var(--title-color);
     text-align: center;
     cursor: pointer;
-}
-
-#register-form {
-    display: none;
 }

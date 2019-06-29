@@ -54,10 +54,9 @@
     </header>
     <div class="busca">
         <div class="container">
-            <form>
-                <input type="text" name="categoria-p" id="" placeholder="Pesquisa por Categoria">
-                <input type="submit" value="buscar">
-            </form>
+            <?php
+                include("PHP/like.php");
+            ?>
         </div>
     </div>
     <main>
@@ -65,8 +64,9 @@
         <div class="content ">
             <!-- Produtos -->
             <?php 
-                include("PHP/quadros.php");
+                // include("PHP/quadros.php");
                 include("PHP/conecta.php");
+                include("PHP/consulta.php");
             ?>
         </div>
     </main>
@@ -125,6 +125,14 @@
                         <img onclick="fechar3() " src="IMG/MODAL/close.png ">
                     </div>
                 </div>
+            </div>
+            <div class="content-main">
+                <form action="PHP/produtos.php" method="POST">
+                    <input type="text" name="nome" id="" placeholder="Nome:"  autocomplete="off">
+                    <input type="text" name="categoria" id="" placeholder="Categoria:"  autocomplete="off">
+                    <input type="text" name="imagem" id="" placeholder="Imagem:" autocomplete="off">
+                    <input type="submit" name="enviar" value="Enviar">
+                </form>
             </div>
         </div>
     </div> 
