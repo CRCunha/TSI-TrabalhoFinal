@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="CSS/MODAL/modal3.css ">
     <link rel="stylesheet" href="CSS/BUSCA/busca.css ">
     <link rel="stylesheet" href="CSS/FOOTER/footer.css">
+    <link rel="stylesheet" href="CSS/MOBILE/mobile.css">
     <script src="JS/modal.js " type="text/JavaScript "></script>
     <script src="JS/log-reg.js " type="text/JavaScript "></script>
     <!--FONTES-->

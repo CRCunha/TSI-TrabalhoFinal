@@ -25,6 +25,7 @@ select:focus {
 
 body {
     background-color: rgb(219, 221, 226);
+    font-family: var(--title);
 }
 
 
