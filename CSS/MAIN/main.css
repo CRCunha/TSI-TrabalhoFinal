@@ -25,6 +25,6 @@ main .content {
     margin-top: 30px;
     margin-bottom: 80px;
     display: var(--flex);
-    justify-content: var(--space-evenly);
+    justify-content: center;
     flex-wrap: var(--wrap);
 }

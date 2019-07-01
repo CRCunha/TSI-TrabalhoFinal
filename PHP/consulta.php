@@ -1,22 +1,9 @@
 <?php
 include("conecta.php");
-
-// $inicial = "";
-
-// if(isset($_REQUEST['buscar'])){	
-// 	$inicial = $_REQUEST['categoria-p'];
-// }
-
-// if ($inicial != ""){
-// 	$sqlAux = " where titulo LIKE '$inicial%' ";
-// }
-
 $sql = "select nome,categoria, imagem, preco from produto";
-
 try {
 	$consulta = $link->prepare($sql);
 	$consulta->execute();
-
 	while ($registro = $consulta->fetch(PDO::FETCH_ASSOC)) {
 		$nome = utf8_decode($registro['nome']);
 		$categoria = utf8_decode($registro['categoria']);
@@ -43,5 +30,4 @@ try {
 catch(PDOException $ex){
 	echo($ex->getMessage());
 }
-
 ?>

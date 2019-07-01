@@ -66,7 +66,6 @@
         <div class="content ">
             <!-- Produtos -->
             <?php 
-                // include("PHP/quadros.php");
                 include("PHP/conecta.php");
                 include("PHP/consulta.php");
             ?>
