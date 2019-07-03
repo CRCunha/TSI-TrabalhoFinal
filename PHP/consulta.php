@@ -1,5 +1,6 @@
 <?php
 include("conecta.php");
+
 $sql = "select nome,categoria, imagem, preco from produto";
 try {
 	$consulta = $link->prepare($sql);

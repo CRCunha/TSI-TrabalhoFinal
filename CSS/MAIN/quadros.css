@@ -58,9 +58,11 @@ main .content .quadro .bot .container .info {
 }
 
 main .content .quadro .bot .container .info .preco {
-    color: #43b05c;
+    color: #87c896;
     margin-left: 10px;
     font-weight: bold;
+    font-size: 11pt;
+    width: 40%;
 }
 
 main .content .quadro .bot .container .info2 {
@@ -104,13 +106,11 @@ main .content .quadro .bot .container .info2 .img2 img {
     width: 70%;
 }
 
-margin-bottom: 10px;
-
-}
 main .content .quadro .top {
     width: 100%;
     height: 80%;
 }
+
 main .content .quadro .bot {
     width: 100%;
     height: 20%;
@@ -122,6 +122,7 @@ main .content .quadro .bot {
     background: linear-gradient(38deg, #374E76 0%, #BC4AB1 100%);
     ;
 }
+
 main .content .quadro .bot .container {
     width: 90%;
     height: 100%;
@@ -130,6 +131,7 @@ main .content .quadro .bot .container {
     align-items: var(--center);
     flex-wrap: var(--wrap);
 }
+
 main .content .quadro .bot .container .info {
     width: 74%;
     height: 100%;
@@ -140,11 +142,13 @@ main .content .quadro .bot .container .info {
     color: var(--title-color);
     font-size: 11pt;
 }
+
 main .content .quadro .bot .container .info .preco {
     color: #43b05c;
     margin-left: 10px;
     font-weight: bold;
 }
+
 main .content .quadro .bot .container .info2 {
     width: 26%;
     height: 100%;
@@ -152,6 +156,7 @@ main .content .quadro .bot .container .info2 {
     justify-content: var(--flex-end);
     align-items: var(--center);
 }
+
 main .content .quadro .bot .container .info2 .img1 {
     background-image: url("../../IMG/MAIN/confirm.png");
     background-position: center;
@@ -165,9 +170,9 @@ main .content .quadro .bot .container .info2 .img1 {
     border-radius: 100%;
     box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.08);
 }
+
 main .content .quadro .bot .container .info2 .img2 {
     /* background-image: url("../../IMG/MAIN/delete.png"); */
-    
     background-position: center;
     background-size: cover;
     width: 30px;
@@ -180,6 +185,7 @@ main .content .quadro .bot .container .info2 .img2 {
     align-items: var(--center);
     box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.08);
 }
+
 main .content .quadro .bot .container .info2 .img2 img {
     width: 70%;
 }
