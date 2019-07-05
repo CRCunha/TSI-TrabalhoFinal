@@ -20,7 +20,13 @@ function fechar2() {
 
 function abrir3() {
     var modal = document.querySelector(".modal3");
-    modal.style.display = 'flex';
+    var senha = prompt("Senha:");
+
+    if (senha != 'lpw') {
+        alert("Senha incorreta");
+    } else {
+        modal.style.display = 'flex';
+    }
 }
 
 function fechar3() {

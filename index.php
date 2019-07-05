@@ -67,7 +67,7 @@
         </div>
     </div>
     <main>
-        <div class="title">Produtos</div>
+        <div class="title">Produtos Destaques</div>
         <div class="content ">
             <!-- Produtos -->
             <?php 
