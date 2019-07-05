@@ -57,7 +57,6 @@
     <div class="busca">
         <div class="menu">
             <a href="index.php">Home</a>
-            <a href="index.php">Home</a>
             <a href="c-mouse.php">Mouse</a>
             <a href="c-teclado.php">Teclado</a>
             <a href="c-headset.php">HeadSet</a>
