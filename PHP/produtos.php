@@ -12,7 +12,6 @@ if(isset($_POST['enviar'])){
 	try {
 		$consulta = $link->prepare($sql);
 		$consulta->execute();
-		echo ("Incluido com sucesso!");
 		header("Location:../index.php");
 	}
 	catch(PDOException $ex){

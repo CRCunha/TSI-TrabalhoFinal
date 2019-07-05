@@ -133,7 +133,7 @@
                 </div>
             </div>
             <div class="content-main">
-                <form   method="POST">
+                <form  action="PHP/produtos.php" method="POST">
                     <input type="text" name="nome" id="" placeholder="Nome:"  autocomplete="off">
                     <input type="text" name="categoria" id="" placeholder="Categoria:"  autocomplete="off">
                     <input type="number" name="preco" id="" placeholder="Preço:" autocomplete="off" step="0.01">
