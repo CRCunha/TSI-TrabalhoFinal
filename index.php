@@ -1,3 +1,10 @@
+
+<?php
+    session_start();
+    require "function.php";
+    require "conecta.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -36,8 +43,14 @@
         <div class="infos ">
             <div class="container ">
                 <div class="l-side ">
-                    <div class="top ">Welcome</div>
-                    <div class="bot ">LPW Project - IFSul - Cristian, Filipe</div>
+                    <?php ?>
+                    
+                    <?php if (isLoggedIn()): ?>
+                        <div class="top">Olá <?php echo $_SESSION['nome']; ?> <a id="logout" href="logout.php">Deslogar</a></div>
+                    <?php else: ?>
+                        <div class="top">Olá User</div>
+                    <?php endif; ?>
+                  <!-- <div class="bot ">LPW Project - IFSul - Cristian, Filipe</div>-->
                 </div>
                 <div class="r-side ">
                     <div class="info " onclick="abrir2() ">Login / Register</div>
@@ -71,8 +84,8 @@
         <div class="content ">
             <!-- Produtos -->
             <?php 
-                include("PHP/conecta.php");
-                include("PHP/consulta.php");
+                include("conecta.php");
+                include("consulta.php");
             ?>
         </div>
     </main>
@@ -106,13 +119,13 @@
                 <div class="btn" id="btn-reg"  onclick="reg() ">Register</div>
             </div>
             <div class="modal2-contents">
-                <form action="PHP/register.php" method="POST" id="register-form">
+                <form action="register.php" method="POST" id="register-form">
                     <input type="text" name="nome" id="" placeholder="Nome:"  autocomplete="off">
                     <input type="email" name="email" id="" placeholder="Email:"  autocomplete="off">
                     <input type="password" name="senha" id="" placeholder="Senha:" autocomplete="off">
                     <input type="submit" name="enviar" value="Enviar">
                 </form>
-                <form action="PHP/login.php" method="POST" id="login-form">
+                <form action="login.php" method="POST" id="login-form">
                     <input type="email" name="email" id="" placeholder="Email:"  autocomplete="off">
                     <input type="password" name="senha" id="" placeholder="Senha:" autocomplete="off">
                     <input type="submit" name="enviar" value="Enviar">
@@ -133,7 +146,7 @@
                 </div>
             </div>
             <div class="content-main">
-                <form  action="PHP/produtos.php" method="POST">
+                <form  action="produtos.php" method="POST">
                     <input type="text" name="nome" id="" placeholder="Nome:"  autocomplete="off">
                     <input type="text" name="categoria" id="" placeholder="Categoria:"  autocomplete="off">
                     <input type="number" name="preco" id="" placeholder="Preço:" autocomplete="off" step="0.01">

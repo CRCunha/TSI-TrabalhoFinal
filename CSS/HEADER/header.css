@@ -110,3 +110,24 @@ header .infos .container .r-side .carrinho {
 header .infos .container .r-side .carrinho img {
     width: 100%;
 }
+
+#logout {
+    margin-left: 30px;
+    width: 100px;
+    height: 35px;
+    background-color: rgb(219, 221, 226);
+    text-decoration: none;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    color: #3f3f3f;
+    border-radius: 8px;
+    font-size: 12pt;
+    transition: .5s;
+}
+
+#logout:hover {
+    background-color: #646464;
+    color: rgb(219, 221, 226);
+    transition: .5s;
+}
