@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 05/07/2019 às 13:04
+-- Tempo de geração: 07/07/2019 às 14:01
 -- Versão do servidor: 10.3.15-MariaDB
 -- Versão do PHP: 7.3.6
 
@@ -40,7 +40,8 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `nome`, `senha`, `email`) VALUES
-(11, 'Cristian Cunha', 'cris', 'contato@cristiancunha.me');
+(11, 'Cristian Cunha', 'cris', 'contato@cristiancunha.me'),
+(12, 'Cristian Cunha', 'b78e049ffc99ec5a4d2599f72a6f9962483b34ce', 'contato@cristiancunha.me');
 
 --
 -- Índices de tabelas apagadas
@@ -60,7 +61,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
