@@ -35,7 +35,7 @@
     <!--FONTES-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap " rel="stylesheet ">
     <!--FAV ICON-->
-    <link rel="shortcut icon " href=" " />
+    <link rel="shortcut icon " href="IMG/fav.png" />
 </head>
 
 <body>
@@ -127,12 +127,12 @@
                     <input type="text" name="nome" id="" placeholder="Nome:"  autocomplete="off">
                     <input type="email" name="email" id="" placeholder="Email:"  autocomplete="off">
                     <input type="password" name="senha" id="" placeholder="Senha:" autocomplete="off">
-                    <input type="submit" name="enviar" value="Enviar">
+                    <input type="submit" name="enviar" value="Registrar">
                 </form>
                 <form action="login.php" method="POST" id="login-form">
                     <input type="email" name="email" id="" placeholder="Email:"  autocomplete="off">
                     <input type="password" name="senha" id="" placeholder="Senha:" autocomplete="off">
-                    <input type="submit" name="enviar" value="Enviar">
+                    <input type="submit" name="enviar" value="Logar">
                 </form>
             </div>
         </div>

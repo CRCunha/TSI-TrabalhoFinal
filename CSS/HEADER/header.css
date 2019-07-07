@@ -121,7 +121,7 @@ header .infos .container .r-side .carrinho img {
     justify-content: var(--center);
     align-items: var(--center);
     color: #3f3f3f;
-    border-radius: 8px;
+    border-radius: 3px;
     font-size: 12pt;
     transition: .5s;
 }

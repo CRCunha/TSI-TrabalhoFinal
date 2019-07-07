@@ -35,7 +35,7 @@
     <!--FONTES-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap " rel="stylesheet ">
     <!--FAV ICON-->
-    <link rel="shortcut icon " href=" " />
+    <link rel="shortcut icon " href="IMG/fav.png" />
 </head>
 
 <body>
@@ -57,7 +57,9 @@
                 <div class="r-side ">
                     <div class="info " onclick="abrir2() ">Login / Register</div>
                     <div class="avatar ">
-                        <div class="img "></div>
+                        <a href="user.php">
+                            <div class="img "></div>
+                        </a>
                     </div>
                     <div class="carrinho ">
                         <img src="IMG/HEADER/carrinho.png " onclick="abrir() ">

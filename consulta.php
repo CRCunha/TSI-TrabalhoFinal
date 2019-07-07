@@ -1,7 +1,7 @@
 <?php
 include("conecta.php");
 
-$sql = "select nome,categoria, imagem, preco from produto where id <= 18"; // AQUI VAI O MAXIMO DE PRODUTOS PA HOME
+$sql = "select nome,categoria, imagem, preco, id from produto where id <= 18"; // AQUI VAI O MAXIMO DE PRODUTOS PA HOME
 	try {
 		$consulta = $link->prepare($sql);
 		$consulta->execute();
@@ -11,9 +11,10 @@ $sql = "select nome,categoria, imagem, preco from produto where id <= 18"; // AQ
 			$categoria = utf8_decode($registro['categoria']);
 			$imagem = utf8_decode($registro['imagem']);
 			$preco = utf8_decode($registro['preco']);
+			$codigo = utf8_decode($registro['id']);
 
 			echo("
-			<div class='quadro'>
+			<div class='quadro'  id='$codigo'>
 			<div class='top '  style='background-image: url($imagem); background-size: 60%; background-position: center; background-repeat: no-repeat;
 			border-top-left-radius: 8px; border-top-right-radius: 8px'></div>
 			<div class='bot '>
