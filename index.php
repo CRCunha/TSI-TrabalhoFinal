@@ -44,18 +44,22 @@
             <div class="container ">
                 <div class="l-side ">
                     <?php ?>
+
                     
                     <?php if (isLoggedIn()): ?>
                         <div class="top">Olá <?php echo $_SESSION['nome']; ?> <a id="logout" href="logout.php">Deslogar</a></div>
                     <?php else: ?>
                         <div class="top">Olá User</div>
+
                     <?php endif; ?>
-                  <!-- <div class="bot ">LPW Project - IFSul - Cristian, Filipe</div>-->
+                <!-- <div class="bot ">LPW Project - IFSul - Cristian, Filipe</div>-->
                 </div>
                 <div class="r-side ">
                     <div class="info " onclick="abrir2() ">Login / Register</div>
                     <div class="avatar ">
-                        <div class="img "></div>
+                        <a href="user.php">
+                            <div class="img "></div>
+                        </a>
                     </div>
                     <div class="carrinho ">
                         <img src="IMG/HEADER/carrinho.png " onclick="abrir() ">

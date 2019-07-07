@@ -1,7 +1,8 @@
+
 <?php
     session_start();
-    require 'conecta.php';
-    require 'function.php';
+    require "function.php";
+    require "conecta.php";
 ?>
 
 <!DOCTYPE html>
@@ -42,11 +43,16 @@
         <div class="infos ">
             <div class="container ">
                 <div class="l-side ">
-                <?php if (isLoggedIn()): ?>
+                    <?php ?>
+
+                    
+                    <?php if (isLoggedIn()): ?>
                         <div class="top">Olá <?php echo $_SESSION['nome']; ?> <a id="logout" href="logout.php">Deslogar</a></div>
                     <?php else: ?>
                         <div class="top">Olá User</div>
+
                     <?php endif; ?>
+                <!-- <div class="bot ">LPW Project - IFSul - Cristian, Filipe</div>-->
                 </div>
                 <div class="r-side ">
                     <div class="info " onclick="abrir2() ">Login / Register</div>
@@ -76,43 +82,22 @@
         </div>
     </div>
     <main>
-        <div class="title">Produtos</div>
+        <div class="title">
+
+        <!-- Verificação de usuario logado ou não -->
+        <?php if (isLoggedIn()): ?>
+            <?php echo("Compras Realizadas por "); echo($_SESSION['nome']); ?>
+        <?php else: ?>
+            <?php echo("Usuario não logado"); ?>
+        <?php endif; ?>
+        </div>
+
         <div class="content ">
             <!-- Produtos -->
-			<?php
-				include("conecta.php");
-
-				$sql = "select nome,categoria, imagem, preco from produto WHERE categoria = 'headset'";
-				try {
-					$consulta = $link->prepare($sql);
-					$consulta->execute();
-					while ($registro = $consulta->fetch(PDO::FETCH_ASSOC)) {
-						$nome = utf8_decode($registro['nome']);
-						$categoria = utf8_decode($registro['categoria']);
-						$imagem = utf8_decode($registro['imagem']);
-						$preco = utf8_decode($registro['preco']);
-					
-						echo("
-						<div class='quadro'>
-						<div class='top '  style='background-image: url($imagem); background-size: 60%; background-position: center; background-repeat: no-repeat;
-						border-top-left-radius: 8px; border-top-right-radius: 8px'></div>
-						<div class='bot '>
-							<div class='container '>
-								<div class='info '>$nome <div class='preco'>$preco R$</div></div>
-								<div class='info2 '>
-									<div class='img1 '></div>
-									<div class='img2 '><img src='../IMG/CATEGORIAS/$categoria.png'></div>
-								</div>
-							</div>
-						</div>
-					</div>
-						");
-					}
-				}
-				catch(PDOException $ex){
-					echo($ex->getMessage());
-				}
-			?>
+            <?php 
+                include("conecta.php");
+                //include("consulta-compras.php");
+            ?>
         </div>
     </main>
     <div  class="modal ">
@@ -172,7 +157,7 @@
                 </div>
             </div>
             <div class="content-main">
-                <form   method="POST">
+                <form  action="produtos.php" method="POST">
                     <input type="text" name="nome" id="" placeholder="Nome:"  autocomplete="off">
                     <input type="text" name="categoria" id="" placeholder="Categoria:"  autocomplete="off">
                     <input type="number" name="preco" id="" placeholder="Preço:" autocomplete="off" step="0.01">
