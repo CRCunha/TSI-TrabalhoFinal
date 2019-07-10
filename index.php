@@ -93,7 +93,7 @@
             ?>
         </div>
     </main>
-    <div  class="modal ">
+    <div  class="modal ""> 
         <div class="container ">
             <div class="header ">
                 <div class="content ">
@@ -103,6 +103,45 @@
                         <img onclick="fechar() " src="IMG/MODAL/close.png ">
                     </div>
                 </div>
+            </div>
+            <div class="carrinho-p">
+                <?php
+
+                    
+                        if(!isset($_SESSION['itens'])){
+                            $_SESSION['itens'] = array();
+                        }
+
+                        if(isset($_GET['add']) && $_GET['add'] == 'carrinho'){
+                            /*Adiciona ao carrinho*/
+                            $idProduto=$_GET['id'];
+                            if(!isset($_SESSION['itens'][$idProduto])){
+                                $_SESSION['itens'][$idProduto] =1;
+                            }else{
+                                $_SESSION['itens'][$idProduto] +=1;
+                            }
+                        }
+                        if(count($_SESSION['itens']) == 0 ){
+                            echo "Carrinho vazio<br><a href='index.php'>Adicionar itens</a>";
+                        }else{
+                            var_dump($_SESSION['itens']);
+                            /**Exibindo o carrinho*/
+                            foreach($_SESSION['itens'] as $idproduto => $quantidade){
+                                $query=$link->prepare('select * from produto where id=?');
+                                $query->bindParam(1,$idProduto);
+                                $query->execute();
+                                $produto = $query->fetchAll();
+                                echo("<div class='produto-carrinho'>");
+                                echo $produto[0]["nome"]."<br>";
+                                echo("</div>");
+                                
+                            }
+                        }
+                    
+                ?>
+                <form action="" method="post">
+                    <input type="submit" name="enviar" value="Finalizar Compra">
+                </form>
             </div>
         </div>
     </div>  

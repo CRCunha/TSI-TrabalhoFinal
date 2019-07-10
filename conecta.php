@@ -18,7 +18,7 @@ try{
 
 catch(PDOException $ex){
 
-    echo("Deu erro! <br>". $ex->getMessage());
+    echo("Erro: ". $ex->getMessage());
 }
 ?>
 

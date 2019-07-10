@@ -142,3 +142,21 @@
 #register-form {
     display: none;
 }
+
+.produto-carrinho {
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    margin-top: 30px;
+    width: 80%;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.03);
+}
+
+.carrinho-p {
+    display: var(--flex);
+    justify-content: var(--center);
+    flex-wrap: var(--wrap);
+    overflow-y: visible;
+}
