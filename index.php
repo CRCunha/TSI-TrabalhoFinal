@@ -175,6 +175,10 @@
                                         echo("<img src='../IMG/CATEGORIAS/$imgProdutoCarrinho.png'>");
                                     echo("</div>");
                                     echo("<div class='info-produtos'>");
+                                        $imagemProduto = $value['imagem'];
+                                        echo("<a href='$imagemProduto' Target='_blank'>Visualizar</a>");
+                                    echo("</div>");
+                                    echo("<div class='info-produtos'>");
                                         echo("<div class='excluir'>");
                                             echo("<div class='img-excluir'>X</div>");
                                         echo("</div>");
