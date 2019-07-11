@@ -191,9 +191,8 @@
                             echo("</div>");
                             ?>
                             
-                            <?php
+                        <?php
                         }
-
                         ?>
                     
                 <?php if(isLoggedIn() && count($_SESSION['itens']) > 0):?>

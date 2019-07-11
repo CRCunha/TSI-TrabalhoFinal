@@ -84,7 +84,7 @@
 			<?php
 				include("conecta.php");
 
-				$sql = "select nome,categoria, imagem, preco from produto WHERE categoria = 'headset'";
+				$sql = "select * from produto WHERE categoria = 'headset'";
 				try {
 					$consulta = $link->prepare($sql);
 					$consulta->execute();
@@ -94,21 +94,22 @@
 						$imagem = utf8_decode($registro['imagem']);
 						$preco = utf8_decode($registro['preco']);
 					
-						echo("
+						echo"
 						<div class='quadro'>
 						<div class='top '  style='background-image: url($imagem); background-size: 60%; background-position: center; background-repeat: no-repeat;
 						border-top-left-radius: 8px; border-top-right-radius: 8px'></div>
 						<div class='bot '>
 							<div class='container '>
 								<div class='info '>$nome <div class='preco'>$preco R$</div></div>
-								<div class='info2 '>
-									<div class='img1 '></div>
-									<div class='img2 '><img src='../IMG/CATEGORIAS/$categoria.png'></div>
+								<div class='info2 '> ";?>
+									<a href="c-headset.php?add=carrinho&id=<?=$registro['id']?>"><div class='img1 '></div></a>
+								<?php echo "<div class='img2 '><img src='../IMG/CATEGORIAS/$categoria.png'></div>
 								</div>
 							</div>
 						</div>
 					</div>
-						");
+						";?>
+                        <?php
 					}
 				}
 				catch(PDOException $ex){
@@ -127,6 +128,107 @@
                         <img onclick="fechar() " src="IMG/MODAL/close.png ">
                     </div>
                 </div>
+            </div>
+            <div class="carrinho-p">
+                <div class='produto-carrinho'>
+                <div class='info-produtos'>Nome</div>
+                <div class='info-produtos'>Valor</div>
+                <div class='info-produtos'>Categoria</div>
+                </div>
+                <?php
+
+                    
+                        if(!isset($_SESSION['itens'])){
+                            $_SESSION['itens'] = array();
+                            $_SESSION['armazenaId'] = array();
+                        }
+                        
+                        if(isset($_GET['add']) && $_GET['add'] == 'carrinho'){
+                            /*Adiciona ao carrinho*/
+                            $idProduto=$_GET['id'];
+
+                            array_push($_SESSION['armazenaId'],$idProduto);
+
+                            if(!isset($_SESSION['itens'][$idProduto])){
+                                $_SESSION['itens'][$idProduto] =1;
+                            }else{
+                                $_SESSION['itens'][$idProduto] +=1;
+                            }
+                        }
+                        if(count($_SESSION['itens']) == 0 ){
+                            echo("<div class='vazio'>");
+                            echo "Carrinho vazio<br>";
+                            echo("<a href='index.php'>Adicionar itens</a>");
+                            echo("</div>");
+                        }else{
+                            //var_dump($_SESSION['itens']);
+                            /*Montando a consulta */
+
+                            $query = "SELECT * FROM produto WHERE id IN (";
+                            $query_aux="";
+                            /*Montando a sengunda parte da query*/
+                            for ($i=0; $i < count($_SESSION['armazenaId']) ; $i++) { 
+                                $query_aux .= $_SESSION['armazenaId'][$i];
+                                if($i < count($_SESSION['armazenaId'])-1){
+                                    $query_aux .=",";
+                                }else{
+                                    $query_aux .="";
+                                }
+                            }
+                            $query_aux.=")";
+                            $query .=$query_aux;
+                            
+                            try{
+                                $consulta=$link->prepare($query);
+                                $consulta->execute();
+                                $resultado=$consulta->fetchAll();
+                                //echo "Requisição ok";
+                            }catch(PDOException $ex){
+                                echo"Erro na requisição:".$query;
+                            }
+                            ?>
+                            
+                            <?php 
+                            $valorTotal = 0;
+                            foreach($resultado as $key=>$value):
+                                echo("<div class='produto-carrinho'>");
+                                    echo("<div class='info-produtos'>");
+                                        echo($value['nome']);
+                                    echo("</div>");
+                                    echo("<div class='info-produtos'>");
+                                        echo($value['preco']. " R$");
+                                        $valor = $value['preco'];
+                                    echo("</div>");
+                                    echo("<div class='info-produtos'>");
+                                        $imgProdutoCarrinho = $value['categoria'];
+                                        echo("<img src='../IMG/CATEGORIAS/$imgProdutoCarrinho.png'>");
+                                    echo("</div>");
+                                    echo("<div class='info-produtos'>");
+                                        $imagemProduto = $value['imagem'];
+                                        echo("<a href='$imagemProduto' Target='_blank'>Visualizar</a>");
+                                    echo("</div>");
+                                    echo("<div class='info-produtos'>");
+                                        echo("<div class='excluir'>");
+                                            echo("<div class='img-excluir'>X</div>");
+                                        echo("</div>");
+                                    echo("</div>");
+                                echo("</div>");
+                                $valorTotal = $valorTotal + $valor;
+                            endforeach;
+
+                            echo("<div class='valor-total'> Valor Total: <div class='valor'> $valorTotal R$</div>");
+                            echo("</div>");
+                            ?>
+                            
+                        <?php
+                        }
+                        ?>
+                    
+                <?php if(isLoggedIn() && count($_SESSION['itens']) > 0):?>
+                <form action="" method="post">
+                    <input type="submit" name="enviar" value="Finalizar Compra">
+                </form>
+                <?php endif; ?>
             </div>
         </div>
     </div>  
