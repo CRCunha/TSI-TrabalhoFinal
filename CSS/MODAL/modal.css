@@ -155,3 +155,26 @@
     color: green;
     font-weight: bolder;
 }
+
+.excluir{
+    margin-left: -80px;
+    width:120px;
+    height:100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+}
+
+.excluir .img-excluir{
+    cursor: pointer;
+    border-radius: 100%;
+    width:45px;
+    height: 45px;
+    background-color:#d75a4a;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    color: var(--title-color);
+    font-size: 18pt;
+
+}

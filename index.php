@@ -106,11 +106,6 @@
             </div>
             <!-- CARRINHO DE COMPRAS -->
             <div class="carrinho-p">
-                <div class='produto-carrinho'>
-                <div class='info-produtos'>Nome</div>
-                <div class='info-produtos'>Valor</div>
-                <div class='info-produtos'>Categoria</div>
-                </div>
                 <?php
 
                     
@@ -179,6 +174,11 @@
                                         $imgProdutoCarrinho = $value['categoria'];
                                         echo("<img src='../IMG/CATEGORIAS/$imgProdutoCarrinho.png'>");
                                     echo("</div>");
+                                    echo("<div class='info-produtos'>");
+                                        echo("<div class='excluir'>");
+                                            echo("<div class='img-excluir'>X</div>");
+                                        echo("</div>");
+                                    echo("</div>");
                                 echo("</div>");
                                 $valorTotal = $valorTotal + $valor;
                             endforeach;
@@ -192,10 +192,11 @@
 
                         ?>
                     
-                
+                <?php if(isLoggedIn() && count($_SESSION['itens']) > 0):?>
                 <form action="" method="post">
                     <input type="submit" name="enviar" value="Finalizar Compra">
                 </form>
+                <?php endif; ?>
             </div>
         </div>
     </div>  
