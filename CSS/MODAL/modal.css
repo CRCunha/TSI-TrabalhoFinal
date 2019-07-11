@@ -117,8 +117,41 @@
     display: var(--flex);
     justify-content: var(--center);
     align-items: var(--center);
+    font-family: var(--title);
+    color: #3f3f3f;
 }
 
 .info-produtos img {
     width: 30%;
+}
+
+.vazio {
+    margin-top: 30px;
+    width: 100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+}
+
+.vazio a {
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.valor-total {
+    margin-top: 30px;
+    margin-bottom: -20px;
+    width: 80%;
+    height: 50px;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    color: #3f3f3f;
+    font-family: var(--title);
+}
+
+.valor-total .valor {
+    margin-left: 10px;
+    color: green;
+    font-weight: bolder;
 }

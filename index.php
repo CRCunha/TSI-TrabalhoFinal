@@ -104,7 +104,13 @@
                     </div>
                 </div>
             </div>
+            <!-- CARRINHO DE COMPRAS -->
             <div class="carrinho-p">
+                <div class='produto-carrinho'>
+                <div class='info-produtos'>Nome</div>
+                <div class='info-produtos'>Valor</div>
+                <div class='info-produtos'>Categoria</div>
+                </div>
                 <?php
 
                     
@@ -126,7 +132,10 @@
                             }
                         }
                         if(count($_SESSION['itens']) == 0 ){
-                            echo "Carrinho vazio<br><a href='index.php'>Adicionar itens</a>";
+                            echo("<div class='vazio'>");
+                            echo "Carrinho vazio<br>";
+                            echo("<a href='index.php'>Adicionar itens</a>");
+                            echo("</div>");
                         }else{
                             //var_dump($_SESSION['itens']);
                             /*Montando a consulta */
@@ -155,26 +164,32 @@
                             }
                             ?>
                             
-                            <?php foreach($resultado as $key=>$value):
+                            <?php 
+                            $valorTotal = 0;
+                            foreach($resultado as $key=>$value):
                                 echo("<div class='produto-carrinho'>");
                                     echo("<div class='info-produtos'>");
                                         echo($value['nome']);
                                     echo("</div>");
                                     echo("<div class='info-produtos'>");
                                         echo($value['preco']. " R$");
+                                        $valor = $value['preco'];
                                     echo("</div>");
                                     echo("<div class='info-produtos'>");
                                         $imgProdutoCarrinho = $value['categoria'];
                                         echo("<img src='../IMG/CATEGORIAS/$imgProdutoCarrinho.png'>");
                                     echo("</div>");
                                 echo("</div>");
+                                $valorTotal = $valorTotal + $valor;
+                            endforeach;
 
-                            endforeach;?>
-                            <?php
-
-                        }
+                            echo("<div class='valor-total'> Valor Total: <div class='valor'> $valorTotal R$</div>");
+                            echo("</div>");
+                            ?>
                             
-                        
+                            <?php
+                        }
+
                         ?>
                     
                 
