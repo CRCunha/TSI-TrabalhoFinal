@@ -110,11 +110,15 @@
                     
                         if(!isset($_SESSION['itens'])){
                             $_SESSION['itens'] = array();
+                            $_SESSION['armazenaId'] = array();
                         }
-
+                        
                         if(isset($_GET['add']) && $_GET['add'] == 'carrinho'){
                             /*Adiciona ao carrinho*/
                             $idProduto=$_GET['id'];
+
+                            array_push($_SESSION['armazenaId'],$idProduto);
+
                             if(!isset($_SESSION['itens'][$idProduto])){
                                 $_SESSION['itens'][$idProduto] =1;
                             }else{
@@ -124,21 +128,56 @@
                         if(count($_SESSION['itens']) == 0 ){
                             echo "Carrinho vazio<br><a href='index.php'>Adicionar itens</a>";
                         }else{
-                            var_dump($_SESSION['itens']);
-                            /**Exibindo o carrinho*/
-                            foreach($_SESSION['itens'] as $idproduto => $quantidade){
-                                $query=$link->prepare('select * from produto where id=?');
-                                $query->bindParam(1,$idProduto);
-                                $query->execute();
-                                $produto = $query->fetchAll();
-                                echo("<div class='produto-carrinho'>");
-                                echo $produto[0]["nome"]."<br>";
-                                echo("</div>");
-                                
+                            //var_dump($_SESSION['itens']);
+                            /*Montando a consulta */
+
+                            $query = "SELECT * FROM produto WHERE id IN (";
+                            $query_aux="";
+                            /*Montando a sengunda parte da query*/
+                            for ($i=0; $i < count($_SESSION['armazenaId']) ; $i++) { 
+                                $query_aux .= $_SESSION['armazenaId'][$i];
+                                if($i < count($_SESSION['armazenaId'])-1){
+                                    $query_aux .=",";
+                                }else{
+                                    $query_aux .="";
+                                }
                             }
+                            $query_aux.=")";
+                            $query .=$query_aux;
+                            
+                            try{
+                                $consulta=$link->prepare($query);
+                                $consulta->execute();
+                                $resultado=$consulta->fetchAll();
+                                //echo "Requisição ok";
+                            }catch(PDOException $ex){
+                                echo"Erro na requisição:".$query;
+                            }
+                            ?>
+                            
+                            <?php foreach($resultado as $key=>$value):
+                                echo("<div class='produto-carrinho'>");
+                                    echo("<div class='info-produtos'>");
+                                        echo($value['nome']);
+                                    echo("</div>");
+                                    echo("<div class='info-produtos'>");
+                                        echo($value['preco']. " R$");
+                                    echo("</div>");
+                                    echo("<div class='info-produtos'>");
+                                        $imgProdutoCarrinho = $value['categoria'];
+                                        echo("<img src='../IMG/CATEGORIAS/$imgProdutoCarrinho.png'>");
+                                    echo("</div>");
+                                echo("</div>");
+
+                            endforeach;?>
+                            <?php
+
                         }
+                            
+                        
+                        ?>
                     
-                ?>
+                
                 <form action="" method="post">
                     <input type="submit" name="enviar" value="Finalizar Compra">
                 </form>

@@ -81,7 +81,7 @@
 
 .carrinho-p {
     display: var(--flex);
-    justify-content: var(--center);
+    justify-content: var(--space-around);
     flex-wrap: var(--wrap);
     overflow-y: visible;
 }
@@ -109,4 +109,16 @@
     background-color: #3f3f3f;
     border-radius: 8px;
     color: var(--title-color);
+}
+
+.info-produtos {
+    width: 150px;
+    height: 100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+}
+
+.info-produtos img {
+    width: 30%;
 }
