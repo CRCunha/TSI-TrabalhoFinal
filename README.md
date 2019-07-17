@@ -1,2 +1,2 @@
 ## Tela
-![](https://i.imgur.com/WPtytxT.png)
+![](https://i.imgur.com/GgWNN6W.gif)
